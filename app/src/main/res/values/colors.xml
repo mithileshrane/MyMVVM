@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="toolbar_grey">#758A9F</color>
+    <color name="white">#FFFFFF</color>
+    <color name="red_light">#FE6E6A</color>
+    <color name="blue">#047FF9</color>
+    <color name="green">#32CD32</color>
+    <color name="edit_hint">#BBBBBB</color>
+    <color name="white_transparent">#33ffffff</color>
+    <color name="map_color_icon">#D7373F</color>
+    <color name="black_grey">#2A2E43</color>
+    <color name="background_color_logo">#177FA6</color>
+
+    <color name="no_records">#A1A1A1</color>
+    <color name="comment_box_edit_text">#F7F8FA</color>
+
+    <color name="start_journey">#66CC66</color>
+    <color name="start_journey_disabled">#FF66CC66</color>
+    <color name="stop_journey">#FE6E6A</color>
+    <color name="info_grey">#758a9f</color>
+    <color name="orange">#FFA500</color>
+    <color name="yellow">#E5E500</color>
+    <color name="black_transparent">#40000000</color>
+
+    <color name="black_olive">#39393F</color>
+    <color name="orange_tag">#FEC500</color>
+    <color name="bg_tag_default">#7cd167</color>
+
+    <!--Colors added as per design changes-->
+    <color name="rect_gray">#758A9F</color>
+    <color name="drawable_icon_light_gray">#E5E3E3</color>
+    <color name="button_bg_red">#FE6E6A</color>
+    <color name="name_black_gray">#4C5264</color>
+    <color name="des_light_gray">#BCC5D3</color>
+    <color name="scheme_light_gray">#B1B4BC</color>
+    <color name="light_gray">#D3D3D3</color>
+    <color name="cust_hint_light_gray">#D1D6D8</color>
+    <color name="pjp_tp_hint_light_gray">#E0E4EA</color>
+    <color name="selected_checkin">#e0e4ea</color>
+
+
+    <!-- Scan Activity Polygon Color-->
+    <color name="polygonViewCircleStrokeColor">#ff59a9ff</color>
+    <color name="polygonViewCircleBackground">#90e5f8ff</color>
+    <color name="bottom_background_color">#ffc4c2bc</color>
+    <color name="name_header_row">#282828</color>
+    <color name="name_subtitle_row">#707070</color>
+    <color name="md_blue_grey_200">#B0BBC5</color>
+    <color name="name_status_color">#b4b4b4</color>
+
+    <color name="black_overlay">#66000000</color>
+</resources>
