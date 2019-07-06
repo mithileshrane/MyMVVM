@@ -7,6 +7,8 @@ import com.example.mvvmapplication.di.roomModule
 import com.example.mvvmapplication.di.viewModelModule
 import org.koin.core.context.startKoin
 
+
+//https://github.com/AgustaRC/MVVMArchitecture/blob/master/app/build.gradle
 class MVVMApp : Application() {
 
     override fun onCreate() {

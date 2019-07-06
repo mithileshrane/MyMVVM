@@ -7,12 +7,15 @@ import androidx.paging.DataSource
 
 @Dao
 interface EmployeeDao {
-    @Query("SELECT * FROM employees ORDER BY fname ASC")
+    suspend @Query("SELECT * FROM employees ORDER BY fname ASC")
     fun findAll(): DataSource.Factory<Int, EmployeeListResponseModel.EmployeeListResult.EmployeeListUserDetail>
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insert(employee: EmployeeListResponseModel.EmployeeListResult.EmployeeListUserDetail)
 
-    @Delete
+    suspend @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insert(employeeList: List<EmployeeListResponseModel.EmployeeListResult.EmployeeListUserDetail>)
+
+    suspend @Delete
     fun delete(employee: EmployeeListResponseModel.EmployeeListResult.EmployeeListUserDetail)
 }
