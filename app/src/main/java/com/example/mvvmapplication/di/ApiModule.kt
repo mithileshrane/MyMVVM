@@ -8,7 +8,10 @@ import retrofit2.Retrofit
 
 val apiModule=module{
 
-    single (createdAtStart = false){
+   /* single (createdAtStart = false){
         get<RetrofitApi>().getClient()
+    }*/
+    single (createdAtStart = false){
+        get<Retrofit>().create(ApiClient::class.java)
     }
 }

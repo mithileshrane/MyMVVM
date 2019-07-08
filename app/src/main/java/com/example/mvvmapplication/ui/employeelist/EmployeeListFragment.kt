@@ -6,8 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import com.example.mvvmapplication.R
 import com.example.mvvmapplication.base.BaseFragment
+import org.koin.androidx.viewmodel.ext.android.getViewModel
 
 
 class EmployeeListFragment : BaseFragment() {
@@ -28,8 +30,10 @@ class EmployeeListFragment : BaseFragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(EmployeeListViewModel::class.java)
-        // TODO: Use the ViewModel
+//        viewModel = ViewModelProviders.of(this).get(EmployeeListViewModel::class.java)
+        viewModel =getViewModel()
+
+        viewModel.call()
     }
 
 }

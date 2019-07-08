@@ -3,6 +3,7 @@ package com.example.mvvmapplication.data.remote.api
 
 import com.example.mvvmapplication.ui.employeelist.GetEmployeeListIDRequestModel
 import com.example.mvvmapplication.data.constant.APIConstants
+import io.reactivex.Single
 
 
 import retrofit2.Call
@@ -16,7 +17,7 @@ interface ApiClient {
 
     @Headers("Content-Type: application/x-www-form-urlencoded")
     @POST(APIConstants.RELATIVE_URL)
-    fun getEmployeeListByID(@Body requestmodel: GetEmployeeListIDRequestModel): Call<String>
+    fun getEmployeeListByID(@Body requestmodel: GetEmployeeListIDRequestModel): Single<String>
 
 
 }
