@@ -2,6 +2,7 @@ package com.example.mvvmapplication.data.db.entity
 
 import android.os.Parcel
 import android.os.Parcelable
+import androidx.annotation.NonNull
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -78,6 +79,7 @@ class EmployeeListResponseModel() : BaseResponseModel(), Parcelable
         @Entity(tableName = "employees")
         class EmployeeListUserDetail() : Parcelable
         {
+            @NonNull
             @PrimaryKey
             @SerializedName("UserId")
             @Expose
@@ -101,7 +103,7 @@ class EmployeeListResponseModel() : BaseResponseModel(), Parcelable
             @ColumnInfo(name = "visitType")
             @SerializedName("VisitType")
             @Expose
-            private var visitType: Any? = null
+            private var visitType: String? = null
 
             @ColumnInfo(name = "designationId")
             @SerializedName("DesignationId")
@@ -160,11 +162,11 @@ class EmployeeListResponseModel() : BaseResponseModel(), Parcelable
                 this.image = image
             }
 
-            fun getVisitType(): Any? {
+            fun getVisitType(): String? {
                 return visitType
             }
 
-            fun setVisitType(visitType: Any) {
+            fun setVisitType(visitType: String) {
                 this.visitType = visitType
             }
 

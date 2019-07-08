@@ -1,16 +1,22 @@
 package com.example.mvvmapplication.di
 
+import android.util.Log
 import com.example.mvvmapplication.BuildConfig
+import com.example.mvvmapplication.data.constant.APIConstants
+import com.example.mvvmapplication.data.hmac.HMACClient
+import com.example.mvvmapplication.data.remote.api.RetrofitApi
 import com.google.gson.GsonBuilder
 import okhttp3.Cache
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.android.ext.koin.androidApplication
+import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.converter.scalars.ScalarsConverterFactory
 import java.util.concurrent.TimeUnit
 
 private const val CONNECT_TIMEOUT = 15L
@@ -18,9 +24,12 @@ private const val WRITE_TIMEOUT = 15L
 private const val READ_TIMEOUT = 15L
 
 val networkModule = module {
-    single { Cache(androidApplication().cacheDir, 10L * 1024 * 1024) }
+    single { Cache(androidContext().cacheDir, 10L * 1024 * 1024) }
 
-    single { GsonBuilder().create() }
+    single { GsonBuilder()
+        .disableHtmlEscaping()
+        .setLenient()
+        .create() }
 
     single {
         OkHttpClient.Builder().apply {
@@ -38,20 +47,51 @@ val networkModule = module {
         }.build()
     }
 
-    single {
+    /*single {
         Retrofit.Builder()
             .baseUrl("https://api.github.com")
             .addConverterFactory(GsonConverterFactory.create(get()))
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .client(get())
             .build()
-    }
+    }*/
 
     single {
+        Retrofit.Builder()
+            .baseUrl(APIConstants.BASE_URL)
+            .addConverterFactory(ScalarsConverterFactory.create())
+            .addConverterFactory(GsonConverterFactory.create(get()))
+            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+            .client(get())
+            .build()
+    }
+
+    /*single {
         Interceptor { chain ->
             chain.proceed(chain.request().newBuilder().apply {
                 header("Accept", "application/vnd.github.mercy-preview+json")
             }.build())
+        }
+    }*/
+
+    single {
+
+        //        HMACClient.setObj1(lmodel)
+        Interceptor { chain ->
+            Log.d("REQ",chain.request().body().toString())
+            HMACClient.setObj1(chain.request().body().toString())
+            val stringArrayList = HMACClient.getAuthenticationHeader()
+            val newRequest = chain.request().newBuilder()
+                .addHeader("Authentication", stringArrayList.get(1))
+
+                .addHeader("Content-Type", "application/x-www-form-urlencoded")
+                .addHeader("ContentDate", HMACClient.currentDate)
+                .addHeader("ContentHash", stringArrayList.get(0))
+
+                .method(chain.request().method(), chain.request().body())
+                .build()
+
+            chain.proceed(newRequest)
         }
     }
 }
