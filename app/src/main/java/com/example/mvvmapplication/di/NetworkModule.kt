@@ -86,9 +86,8 @@ val networkModule = module {
 //            HMACClient.setObj1(chain.request().body().toString())
             val buffer = Buffer()
             chain.request().body()?.writeTo(buffer)
-            var charset=Charset.forName("UTF-8")
+            val charset=Charset.forName("UTF-8")
             HMACClient.setObj1(buffer.readString(charset))
-
 
             val stringArrayList = HMACClient.getAuthenticationHeader()
             val newRequest = chain.request().newBuilder()
