@@ -6,6 +6,7 @@ import com.example.mvvmapplication.data.constant.APIConstants
 import com.example.mvvmapplication.data.constant.Constant
 import com.example.mvvmapplication.data.db.dao.EmployeeDao
 import com.example.mvvmapplication.data.db.entity.EmployeeListResponseModel
+import com.example.mvvmapplication.data.hmac.HMACClient
 import com.example.mvvmapplication.data.remote.api.ApiClient
 import com.example.mvvmapplication.extensions.with
 import com.example.mvvmapplication.util.NotNullMutableLiveData
@@ -42,6 +43,7 @@ class EmployeeListViewModel(private val apiClient: ApiClient, private val dao: E
         )*/
 
         addToDisposable(apiClient.getEmployeeListByID(requestmodel).with().subscribe({
+
             val responseModel = Gson().fromJson(
                 it
                 , EmployeeListResponseModel::class.java
