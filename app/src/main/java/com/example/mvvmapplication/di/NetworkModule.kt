@@ -117,9 +117,17 @@ val networkModule = module {
                 // retry the request
                 response = chain.proceed(newRequest)
             }
+           /* val source = response.body()?.source()
+            source?.request(java.lang.Long.MAX_VALUE) // Buffer the entire body.
+            val bufferResp = source?.buffer()
 
+
+           val isValid= HMACClient.parseResponse(response,bufferResp?.readString(charset))
+            Log.d("REQ", "isValid - $isValid")*/
             // otherwise just pass the original response on
            response
+
+
         }
     }
 }

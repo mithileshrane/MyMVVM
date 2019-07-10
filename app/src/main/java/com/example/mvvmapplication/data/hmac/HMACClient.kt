@@ -8,6 +8,7 @@ import android.util.Log
 import android.widget.Toast
 import com.example.mvvmapplication.data.constant.APIConstants
 import com.example.mvvmapplication.data.constant.Constant
+import okhttp3.ResponseBody
 
 import retrofit2.Response
 import java.io.UnsupportedEncodingException
@@ -232,6 +233,60 @@ object HMACClient {
         return date
     }
 
+    fun parseResponse(response: okhttp3.Response?, contentToEncoded: String?) :Boolean{
+        var isvalidresponse = false
+        try {
+            val hmacFromRequest = response?.headers()?.get("Authentication")
+            val contentMD5FromRequest = response?.headers()?.get("ContentHash")
+            val currentDateFromRequest = response?.headers()?.get("ContentDate")
+            if (currentDateFromRequest != null) {
+                if (isValidTimeDiff(currentDateFromRequest, getUTCtime())) {
+                    var url1 = ""
+                    try {
+                        url1 = URL(APIConstants.AbsolutePath_URL).path
+                    } catch (e: MalformedURLException) {
+                        Constant.showLog(javaClass.simpleName, "Msg==", e.fillInStackTrace(),Log.DEBUG)
+                    }
+
+                    val verb = "POST"
+                    val contentType = "application/x-www-form-urlencoded"
+                    val contentMd5 = calculateMD5(contentToEncoded.toString())!!.replace("\n", "")
+                    val toSign = (verb + "\n" + contentType + "\n" +
+                            contentMd5 + "\n" + url1 + "\n"
+                            + currentDateFromRequest)
+
+                    val hmacCalculated = calculateHMAC(toSign).replace("\n", "")
+
+                    Constant.showLog("----", "------------------------",Log.DEBUG)
+                    Constant.showLog("----", "Data = $contentToEncoded",Log.ERROR)
+                    Constant.showLog("----", "hmacFromRequest = " + hmacFromRequest!!,Log.DEBUG)
+                    Constant.showLog("----", "hmacCalculated = $hmacCalculated",Log.DEBUG)
+                    Constant.showLog("----", "url 1 = $url1",Log.DEBUG)
+                    Constant.showLog("----", "toSign = $toSign",Log.DEBUG)
+
+                    val isValid = hmacCalculated == hmacFromRequest
+                    if (!isValid) {
+                        isvalidresponse = false
+                        exitApplication()
+                    } else {
+                        isvalidresponse = true
+                        return isvalidresponse
+                    }
+                } else {
+                    isvalidresponse = false
+                    exitApplication()
+                }
+            } else {
+                isvalidresponse = false
+                exitApplication()
+            }
+
+        } catch (e: Exception) {
+            Constant.showLog(javaClass.simpleName, "Msg==", e.fillInStackTrace(),Log.DEBUG)
+        }
+
+        return isvalidresponse
+    }
 
 
 }

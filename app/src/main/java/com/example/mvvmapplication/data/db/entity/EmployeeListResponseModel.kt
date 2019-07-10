@@ -3,6 +3,7 @@ package com.example.mvvmapplication.data.db.entity
 import android.os.Parcel
 import android.os.Parcelable
 import androidx.annotation.NonNull
+import androidx.annotation.Nullable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -100,6 +101,7 @@ class EmployeeListResponseModel() : BaseResponseModel(), Parcelable
             @Expose
             private var image: String? = null
 
+            @Nullable
             @ColumnInfo(name = "visitType")
             @SerializedName("VisitType")
             @Expose

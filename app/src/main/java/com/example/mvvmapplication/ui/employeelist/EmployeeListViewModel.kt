@@ -25,7 +25,7 @@ class EmployeeListViewModel(private val apiClient: ApiClient, private val dao: E
         val requestmodel = GetEmployeeListIDRequestModel()
         requestmodel.CommandType = APIConstants.GET_EMPLOYEELISTBY_ID
         requestmodel.UserId = "15a16afa-b507-4146-9809-c3b193e6b6ee"
-        requestmodel.DeviceToken = "adbb1843-f23a-4385-9d14-fcd9e9798246"
+        requestmodel.DeviceToken = "7157e60e-5c14-4d08-8866-15911e8defc2"
 //            requestmodel.LastDtmChecked = SessionManager.getLastDtmEmployeeList()
         //Change offline logic for extra f;ag in table at api
         requestmodel.LastDtmChecked = ""
@@ -42,21 +42,77 @@ class EmployeeListViewModel(private val apiClient: ApiClient, private val dao: E
             })
         )*/
 
-        addToDisposable(apiClient.getEmployeeListByID(requestmodel).with().subscribe({
+       /* addToDisposable(apiClient.getEmployeeListByID(requestmodel).with().subscribe({
 
             val responseModel = Gson().fromJson(
                 it
                 , EmployeeListResponseModel::class.java
             )
+            if( responseModel.getResult()!=null){
             _items.value = responseModel.getResult()?.getUserDetail()!!
 
             GlobalScope.async {
                 dao.insert(responseModel.getResult()?.getUserDetail()!!)
             }
+            }
+        }, {
+
+            it.message
+        }))*/
+
+        addToDisposable(apiClient.getEmployeeListByID(requestmodel).with().subscribe({
+            val isValid=HMACClient.parseResponse(it,it.body()!!)
+            if (isValid){
+                val responseModel = Gson().fromJson(
+                    it.body()
+                    , EmployeeListResponseModel::class.java
+                )
+
+                if( responseModel.getResult()!=null){
+                    _items.value = responseModel.getResult()?.getUserDetail()!!
+
+                    GlobalScope.async {
+                        try {
+                            val inserted= dao.insert(responseModel.getResult()?.getUserDetail()!!)
+                            Log.d("REQ:","inserted: $inserted")
+
+                            val lsit=dao.findAll()
+
+                            Log.d("REQ:","lsit size: ${lsit.size}")
+                        } catch (e: Exception) {
+                            e.message
+                        }
+                    }
+                }
+            }else{
+
+            }
+
         }, {
 
             it.message
         }))
 
+
+        /*addToDisposable(apiClient.getEmployeeListByID(requestmodel).with().subscribe({
+            val isValid = HMACClient.parseResponse(it, it.body()!!)
+            if (isValid) {
+                val responseModel = Gson().fromJson(
+                    it
+                    , EmployeeListResponseModel::class.java
+                )
+                if (responseModel.getResult() != null) {
+                    _items.value = responseModel.getResult()?.getUserDetail()!!
+
+                    GlobalScope.async {
+                        dao.insert(responseModel.getResult()?.getUserDetail()!!)
+                    }
+                }
+            }
+
+        }, {
+            it.message
+        }))
+*/
     }
 }
