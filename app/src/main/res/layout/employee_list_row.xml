@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rel_main_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dimen_14dp"
+        android:paddingLeft="@dimen/dimen_10dp"
+        android:paddingRight="@dimen/dimen_10dp"
+        android:paddingBottom="@dimen/dimen_14dp">
+
+        <ImageView
+            android:id="@+id/iv_employee_img"
+            android:layout_width="@dimen/dimen_40dp"
+            android:layout_marginTop="@dimen/dimen_3dp"
+            android:layout_height="@dimen/dimen_40dp"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:layout_marginEnd="@dimen/employeeList_employeeImg_marginLeft"
+            android:scaleType="fitXY"
+             />
+
+        <RelativeLayout
+            android:id="@+id/rel_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            android:layout_marginBottom="@dimen/dimen_8dp"
+            android:layout_toEndOf="@+id/iv_employee_img"
+            android:layout_toStartOf="@+id/iv_next_arrow_img">
+
+            <TextView
+                android:id="@+id/tv_employee_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:ellipsize="end"
+                android:minLines="1"
+                android:maxLines="1"
+                android:text="@string/txt_dummy_name"
+                android:textColor="@color/name_black_gray"
+                android:textSize="@dimen/txt_14sp"
+                />
+
+            <TextView
+                android:id="@+id/tv_employee_designation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:minLines="1"
+                android:maxLines="1"
+                android:layout_below="@+id/tv_employee_name"
+                android:layout_marginTop="@dimen/dimen_2dp"
+                android:text="@string/txt_dummy_employee_designation"
+                android:textColor="@color/name_subtitle_row"
+                android:textSize="@dimen/txt_14sp" />
+
+            <TextView
+                    android:id="@+id/tv_tracking_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_dummy_visited_text"
+                    android:layout_below="@+id/tv_employee_designation"
+                    android:textSize="@dimen/txt_12sp"
+                    android:textColor="@color/name_status_color"
+                   />
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/iv_next_arrow_img"
+            android:layout_width="@dimen/dimen_14dp"
+            android:layout_height="@dimen/dimen_14dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/dimen_10dp"
+            android:layout_marginEnd="@dimen/employeeList_iconNext_marginRight"
+            android:background="@mipmap/ic_launcher" />
+        <View
+                android:id="@+id/divider_line"
+                android:layout_toEndOf="@+id/iv_employee_img"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/rel_details"
+                android:background="@color/drawable_icon_light_gray" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,13 +1,16 @@
 package com.example.mvvmapplication.data.db
 
 import android.content.Context
+import androidx.databinding.adapters.Converters
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 import com.example.mvvmapplication.data.db.entity.EmployeeListResponseModel
 import com.example.mvvmapplication.data.db.AppDatabase.Companion.DB_VERSION
+import com.example.mvvmapplication.data.db.converters.NullConverters
 import com.example.mvvmapplication.data.db.dao.EmployeeDao
 
 @Database(
@@ -15,7 +18,7 @@ import com.example.mvvmapplication.data.db.dao.EmployeeDao
     version = DB_VERSION,
     exportSchema = false
 )
-
+@TypeConverters(NullConverters::class)
 abstract class AppDatabase :RoomDatabase(){
     abstract fun getEmployeeDao(): EmployeeDao
 

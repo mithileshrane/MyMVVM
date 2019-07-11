@@ -1,4 +1,105 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="splashImg">60dp</dimen>
+    <dimen name="dimen_30dp">30dp</dimen>
+    <dimen name="dimen_25dp">25dp</dimen>
+    <dimen name="dimen_20dp">20dp</dimen>
     <dimen name="dimen_10dp">10dp</dimen>
+    <dimen name="txt36sp">36sp</dimen>
+    <dimen name="txt30sp">30sp</dimen>
+    <dimen name="txt26sp">26sp</dimen>
+    <dimen name="dimen_80dp">80dp</dimen>
+
+    <dimen name="dimen_50dp">50dp</dimen>
+    <dimen name="dimen_text_size_15sp">15sp</dimen>
+    <dimen name="dimen_8dp">8dp</dimen>
+    <dimen name="dimen_text_size_14sp">14sp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">150dp</dimen>
+
+    <dimen name="txt24sp">24sp</dimen>
+    <dimen name="txt_22sp">22sp</dimen>
+    <dimen name="txt_18sp">18sp</dimen>
+    <dimen name="dimen_60dp">60dp</dimen>
+    <dimen name="dimen_55dp">55dp</dimen>
+    <dimen name="dimen_160dp">160dp</dimen>
+    <dimen name="txt_20sp">20sp</dimen>
+    <dimen name="dimen_16dp">16dp</dimen>
+    <dimen name="txt_14sp">14sp</dimen>
+    <dimen name="txt_12sp">12sp</dimen>
+    <dimen name="nav_header_profile_image_height_width">100dp</dimen>
+    <dimen name="txt_16sp">16sp</dimen>
+    <dimen name="dimen_40dp">40dp</dimen>
+    <dimen name="dimen_15dp">15dp</dimen>
+    <dimen name="dimen_24dp">24dp</dimen>
+    <dimen name="dimen_22dp">22dp</dimen>
+    <dimen name="dimen_5dp">5dp</dimen>
+    <dimen name="dimen_2dp">2dp</dimen>
+    <dimen name="dimen_3dp">3dp</dimen>
+
+    <!--Dimens for search bar layout-->
+    <dimen name="laySearch_height">60dp</dimen>
+    <dimen name="laySearch_paddingTopBottom">10dp</dimen>
+    <dimen name="laySearch_paddingLeftRight">7dp</dimen>
+    <dimen name="laySearch_iconSearch_size">15dp</dimen>
+    <dimen name="laySearch_iconSearch_marginRight">15dp</dimen>
+    <dimen name="laySearch_iconSearch_marginLeft">10dp</dimen>
+    <dimen name="laySearch_edtSearch_paddingLeft">10dp</dimen>
+    <dimen name="laySearch_edtSearch_paddingRight">10dp</dimen>
+    <dimen name="laySearch_edtSearch_marginRight">5dp</dimen>
+    <dimen name="laySearch_edtSearch_textsize">15sp</dimen>
+
+    <!--Dimens for no data layout-->
+    <dimen name="noData_add_arrow_textsize">80sp</dimen>
+    <dimen name="noData_add_arrow_marginRight">50dp</dimen>
+    <dimen name="noData_container_padding">20dp</dimen>
+    <dimen name="noData_icon_nodata_textsize">40sp</dimen>
+    <dimen name="noData_text_nodata_textsize">22sp</dimen>
+    <dimen name="noData_text_nodata_marginTop">30dp</dimen>
+
+    <!--Dimens for edit text-->
+    <dimen name="edit_text_height">40dp</dimen>
+    <dimen name="edit_text_text_size">14sp</dimen>
+    <dimen name="edit_text_padding">5dp</dimen>
+
+    <!--Dimens for employee list-->
+    <dimen name="employeeList_paddingTopBottom">15dp</dimen>
+    <dimen name="employeeList_employeeImg_marginLeft">20dp</dimen>
+    <dimen name="employeeList_employeeImg_marginRight">10dp</dimen>
+    <dimen name="employeeList_iconNext_marginRight">5dp</dimen>
+    <dimen name="dimen_130dp">130dp</dimen>
+
+    <dimen name="border">0.005dip</dimen>
+    <dimen name="dimen_7dp">7dp</dimen>
+    <dimen name="dimen_4dp">4dp</dimen>
+
+    <!--Dimens for Bar Chart-->
+    <dimen name="dimen_bar_chart_XAxis">5dp</dimen>
+    <item name="dimen_bar_chart_vertical_grid_width" format="float" type="dimen">0.68</item>
+
+    <dimen name="dimen_51dp">51dp</dimen>
+    <dimen name="dimen_14dp">14dp</dimen>
+    <dimen name="dimen_28dp">28dp</dimen>
+    <dimen name="dimen_35dp">35dp</dimen>
+    <dimen name="dimen_150dp">150dp</dimen>
+    <dimen name="dimen_170dp">170dp</dimen>
+    <dimen name="dimen_12dp">12dp</dimen>
+    <dimen name="dimen_45dp">45dp</dimen>
+
+
+    <!-- Scan Activity PolygonView -->
+
+    <dimen name="scanPadding">16dp</dimen>
+    <dimen name="polygonViewCircleWidth">32dp</dimen>
+    <dimen name="polygonViewStrokeWidth">2dp</dimen>
+    <dimen name="bottom_bar_padding">15dp</dimen>
+    <dimen name="dimen_200dp">200dp</dimen>
+    <dimen name="txt_26sp">26sp</dimen>
+    <dimen name="txt_10sp">10sp</dimen>
+    <dimen name="txt_8sp">8sp</dimen>
+
 </resources>
