@@ -1,6 +1,715 @@
 <resources>
-    <string name="app_name">MVVMApplication</string>
+    <string name="app_name">TradePartner</string>
     <string name="action_settings">Settings</string>
-    <string name="txt_dummy">Dummy</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txt_forgot_password_title">Forgot Password</string>
+    <string name="txt_change_password_title">Change Password</string>
+    <string name="txt_set_password_title">Enter Password</string>
+    <string name="txt_enter_new_password">Enter New Password</string>
+    <string name="txt_reenter_new_password">Re-Enter Password</string>
+    <string name="txt_submit">Submit</string>
+    <string name="txt_ok">OK</string>
+    <string name="txt_next">Next</string>
+    <string name="txt_password_star">***************</string>
+    <string name="txt_email_hint">Enter your Email id</string>
+    <string name="txt_dummy">Password Changed Successfully</string>
+    <string name="title_activity_dash_board">DashBoardActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="txt_dummy_name">Mithilesh Rane</string>
+    <string name="txt_verify_otp_title">Verify</string>
+    <string name="txt_enter_otp">Enter your OTP Here</string>
+    <string name="txt_one_time_password">One Time Password</string>
+    <string name="txt_login">Login</string>
+    <string name="txt_email">Email</string>
+    <string name="txt_10oct2018">10 Oct 2018</string>
+    <string name="txt_password">Password</string>
+    <string name="txt_remember_me">Remember me</string>
+    <string name="txt_forgot_password">Forgot Password?</string>
+    <string name="icon_search"></string>
+    <string name="txt_search">Search</string>
+
+    <string name="txt_resend_otp">Resend</string>
+    <string name="search">Search</string>
+    <string name="no_records">No Records</string>
+    <string name="no_scheme_found">No Scheme Found</string>
+
+    <!--Dummy Texts-->
+    <string name="txt_dummy_employee_name">Mithilesh Rane</string>
+    <string name="txt_dummy_employee_designation">Sales Executive</string>
+
+    <string name="txt_dummy_dealer_name">Om Sai Computers</string>
+    <string name="txt_dummy_dealer_address">Nehru Place, South Delhi Detailed Address\n411002</string>
+
+    <string name="txt_dummy_visited_text">Visited</string>
+    <string name="txt_dummy_not_visited_text">Not Visited</string>
+
+    <string name="txt_dummy_scheduled_at">Scheduled : 10 Oct 2018, 11.00 AM.</string>
+    <string name="txt_dummy_stayed_for">Stayed for : 2 Hrs.</string>
+
+    <string name="txt_dummy_point_discussed_1">Point Discussed</string>
+    <string name="txt_dummy_point_discussed_2">In Feb New requirement</string>
+
+    <string name="txt_dummy_total_value_received_1">Total Amount Received</string>
+    <string name="txt_dummy_total_value_received_2">Rs. 100000</string>
+
+    <string name="txt_dummy_ageing_stock_details_1">Ageing Stock Details</string>
+    <string name="txt_dummy_ageing_stock_details_2">With the offer periods</string>
+
+    <string name="txt_dummy_ageing_stock_value_1">Ageing Stock Value</string>
+    <string name="txt_dummy_ageing_stock_value_2">1000</string>
+
+    <string name="txt_dummy_reason_for_ageing_1">Reason For Ageing</string>
+    <string name="txt_dummy_reason_for_ageing_2">Season fail due to</string>
+
+    <string name="txt_approve">Approve</string>
+    <string name="txt_comment_box">Manager\'s comment</string>
+
+    <string name="txt_dummy_current_date">10-Oct-2018</string>
+    <string name="txt_dummy_stayed">2 Hrs</string>
+
+    <string name="txt_dummy_address">Nehru Place, South Delhi</string>
+    <string name="txt_dummy_visited_date">1 Oct 2018 11.00 AM</string>
+
+    <string name="txt_dummy_scheme_name">Start Year</string>
+    <string name="txt_dummy_scheme_product_name">Dell Inspiron 1545</string>
+    <string name="txt_dummy_scheme_saving_price">1500/- per unit</string>
+    <string name="txt_dummy_scheme_description">Flat 2000 per unit from 01 Jan 2019 to 31 March 2019</string>
+    <string name="txt_dummy_scheme_nlc">32913 Per unit</string>
+    <string name="txt_dummy_scheme_product_price">10000</string>
+
+    <string name="txt_customer_added">Customer Added</string>
+    <string name="txt_customer_updated">Customer Updated</string>
+    <string name="txt_contact_admin_added">Customer Added Successfully, will be verified by Admin</string>
+    <string name="txt_contact_admin_updated">Customer Updated Successfully, will be verified by Admin</string>
+
+    <string name="txt_tour_plan">Tour Plan</string>
+
+    <!--Strings for Customer Screen-->
+    <string name="txt_dealer_code">Dealer/Customer Code</string>
+    <string name="txt_dealer_name">Dealer/Customer Name</string>
+    <string name="txt_contact_person_name">Contact Person Name</string>
+    <string name="txt_mobile_number">Mobile No</string>
+    <string name="txt_contact_number">Contact No</string>
+    <string name="txt_email_">Email</string>
+    <string name="txt_address_1">Address 1</string>
+    <string name="txt_address_2">Address 2</string>
+    <string name="txt_address_3">Address 3</string>
+
+    <!--<string name="txt_current_annual_turnover">Current Annual Turnover</string>-->
+    <string name="txt_current_annual_turnover">Annual Turnover</string>
+    <string name="txt_monthly_value_billing">Monthly Value Billing</string>
+    <string name="txt_dealing_with_brands">Dealing With Brands</string>
+    <string name="txt_dealing_with_brands2">Dealing With Brands:</string>
+    <string name="txt_area_of_operation">Area Of Operation</string>
+    <string name="txt_billing_to_start_from">Billing To Start From</string>
+    <string name="txt_document_received_for_new_dealer">Document Received For New Dealer</string>
+    <string name="txt_document_verified_and_approved">Document Verified and Approved</string>
+    <string name="txt_dealer_code_created">Dealer/Customer Code Created</string>
+
+    <!-- Response messages -->
+    <string name="txt_otp_send_success">OTP sent successfully</string>
+    <string name="txt_password_should_match">Both password should be match</string>
+
+    <string name="txt_start_journey">Start Today\'s Journey</string>
+    <string name="txt_stop_journey">Stop Today\'s Journey</string>
+
+    <string name="txt_Numerical">List</string>
+    <string name="txt_Graphical">Graph</string>
+    <string name="txt_TotalVisit">Total Visit</string>
+    <string name="txt_TitleTotalCloseAmt">Total Closed Amount</string>
+    <string name="txt_OperationArea">Operational Area:</string>
+    <string name="txt_OperationAreaDetails">Mobile,Mosiue,Ketuye j, jdfsh,jhdskhkj hjfdhkjf,jfhd</string>
+    <string name="txt_DealingBrands">Dealing Brands:</string>
+    <string name="txt_ClosedAmount">Closed Amount:</string>
+    <string name="txt_SpentHrs">Spent Time:</string>
+    <string name="txt_date">Date</string>
+    <string name="txt_day">Day</string>
+    <string name="txt_dealer_customer_name">Dealer / Customer Name</string>
+    <string name="txt_dealer_customer_code">Dealer / Customer Code</string>
+    <string name="txt_address1">Address 1</string>
+    <string name="txt_address2">Address 2</string>
+    <string name="txt_address3">Address 3</string>
+    <string name="txt_check_in">Check-In</string>
+    <string name="txt_check_out">Check-Out</string>
+    <string name="txt_point_to_be_discussed">Points Discussed</string>
+    <string name="txt_expected_value_order_to_received">Expected Amount to Receive</string>
+    <string name="txt_point_Discussed">Points Discussed</string>
+    <string name="txt_save">Save</string>
+    <string name="txt_turnover">Turn Over: %1s</string>
+    <string name="txt_turnover2">Turn Over:</string>
+    <string name="txt_monthlybill">Monthly Billing: %1s</string>
+    <string name="txt_monthlybill2">Monthly Billing:</string>
+    <string name="txt_week">week</string>
+    <string name="txt_month">month</string>
+    <string name="txt_quarter">quarter</string>
+    <string name="txt_graph_customer_visit_by">Customer Visit by %1s</string>
+    <string name="txt_customer_base_report">Customer ASM Report</string>
+    <string name="title_activity_mngr_visit_pjptp">MngrVisitPJPTPActivity</string>
+    <string name="title_activity_map_view">MapViewActivity</string>
+    <string name="txt_select_scheme">Select Scheme</string>
+    <string name="txt_add_customer">Add Customer</string>
+    <string name="txt_update_customer">Update Customer</string>
+    <string name="txt_dell_dummy">Dell Inspiron 1545</string>
+    <string name="txt_customer_list">Customer Requests</string>
+    <string name="txt_reset">Reset</string>
+    <string name="txt_filter">Filter</string>
+    <string name="txt_from_date">From</string>
+    <string name="txt_to_date">To</string>
+    <string name="txt_TypeOf_JP">Type PJP/TP</string>
+    <string name="txt_Employee">Employee</string>
+    <string name="txt_Sales_Executive">Sales Executive</string>
+    <string name="txt_EmployeeList">Employee List</string>
+    <string name="txt_projected_journey_plan">Projected Journey Plan</string>
+    <string name="txt_inhouse">In House</string>
+    <string name="txt_city">City</string>
+    <string name="txt_country">Country</string>
+    <string name="txt_state">State</string>
+    <string name="txt_pincode">Pincode</string>
+    <string name="txt_action_liquidate_ageing">Action to liquidate ageing</string>
+    <string name="txt_new_dealer_added">New dealer added if any</string>
+    <string name="txt_location">Location</string>
+    <string name="txt_location_hint">Street, Road, Address</string>
+    <string name="txt_monthly_business">Expected Monthly Business</string>
+    <string name="txt_dummy_total_value_received_3">100000</string>
+    <string name="txt_HOD_Remark">HOD Remark</string>
+    <string name="txt_comment">Comment</string>
+    <string name="txt_no_comments">No comments</string>
+
+    <!--&lt;!&ndash;Validation messages&ndash;&gt;
+    <string name="txt_password_policy_error">Password is required to have minimum 8 characters with at least one alphabet, one number and one special character</string>
+    <string name="txt_new_password_policy_error">New Password is required to have minimum 8 characters with at least one alphabet, one number and one special character</string>
+    <string name="txt_confirm_password_policy_error">Confirm Password is required to have minimum 8 characters with at least one alphabet, one number and one special character</string>
+
+    <string name="txt_current_new_password_same">Current Password and New Password cannot be same</string>
+    <string name="txt_both_password_same">New Password and Confirm Password must be same</string>
+    <string name="txt_pls_enter_new_password">Please Enter New Password</string>
+    <string name="txt_pls_reenter_new_password">Please Enter Confirm Password</string>
+    <string name="txt_no_internet_connection">No internet connection</string>
+    <string name="txt_something_went_wrong">Something went wrong</string>
+
+    &lt;!&ndash;Forgot Password&ndash;&gt;
+    <string name="txt_enter_email_id">Please enter Email</string>
+    <string name="txt_enter_valid_email_id">Please enter valid Email</string>
+
+    &lt;!&ndash;Login&ndash;&gt;
+    <string name="txt_enter_password">Please enter Password</string>
+
+    &lt;!&ndash;Verify OTP&ndash;&gt;
+    <string name="txt_enter_otp_">Please enter OTP</string>
+    <string name="txt_enter_valid_otp">Please enter valid OTP</string>
+
+    &lt;!&ndash;Change Password&ndash;&gt;
+    <string name="txt_enter_new_password_">Please enter New Password</string>
+    <string name="txt_enter_valid_password">Please enter valid Password</string>
+    <string name="txt_re_enter_new_password">Please re-enter New Password</string>
+    <string name="txt_confirm_new_password">Confirm New Password</string>
+    <string name="txt_current_password">Current Password</string>
+    <string name="txt_new_password">New Password</string>
+    <string name="txt_re_enter_password">Re-enter Password</string>
+    <string name="txt_star">*</string>
+
+    <string name="txt_no_records_field">No Records for %1s</string>
+    <string name="txt_add_pjp">Add PJP</string>
+    <string name="txt_edit_pjp">Edit PJP</string>
+    <string name="txt_add_tpp">Add TP</string>
+    <string name="txt_edit_tpp">Edit TP</string>
+    <string name="permission_denied_explanation">Denied Permission</string>
+    <string name="settings">Settings</string>
+    <string name="permission_rationale">Permission</string>
+    <string name="ok">OK</string>
+
+    &lt;!&ndash;Add/Edit Customer&ndash;&gt;
+    <string name="txt_enter_dealer_code">Please enter Customer Code</string>
+    <string name="txt_enter_valid_dealer_code">Please enter valid Customer Code</string>
+    <string name="txt_enter_dealer_name">Please enter Customer Name</string>
+    <string name="txt_enter_valid_dealer_name">Please enter valid Customer Name</string>
+    <string name="txt_enter_contact_person_name">Please enter Contact Person Name</string>
+    <string name="txt_enter_valid_contact_person_name">Please enter valid Contact Person Name</string>
+    <string name="txt_enter_mobile_number">Please enter Mobile Number</string>
+    <string name="txt_enter_valid_mobile_number">Please enter valid Mobile Number</string>
+    <string name="txt_enter_contact_number">Please enter Contact Number</string>
+    <string name="txt_enter_valid_contact_number">Please enter valid Contact Number</string>
+    <string name="txt_enter_address">Please enter Address</string>
+    <string name="txt_enter_country">Please enter Country</string>
+    <string name="txt_enter_state">Please enter State</string>
+    <string name="txt_enter_city">Please enter City</string>
+    <string name="txt_enter_pincode">Please enter Pincode</string>
+    <string name="txt_enter_valid_pincode">please enter valid Pincode</string>
+    <string name="txt_enter_current_annual_turnover">Please enter Current Annual Turnover</string>
+    <string name="txt_enter_valid_current_annual_turnover">Please enter valid Current Annual Turnover</string>
+    <string name="txt_enter_monthly_value_billing">Please enter Monthly Value Billing</string>
+    <string name="txt_enter_valid_monthly_value_billing">Please enter valid Monthly Value Billing</string>
+    <string name="txt_enter_dealing_with_brands">Please enter Dealing With Brands</string>
+    <string name="txt_enter_area_of_operation">Please enter Area Of Operation</string>
+    <string name="txt_enter_billing_to_start_from">Please enter Billing To Start From</string>
+    <string name="txt_enter_valid_billing_to_start_from">Please enter valid Billing To Start From</string>
+    <string name="geofences_added">Geofences Added</string>
+    <string name="geofence_transition_entered">Geo Entered</string>
+    <string name="geofence_transition_exited">Geofence exit</string>
+    <string name="unknown_geofence_transition">Unknown</string>
+
+    <string name="txt_is_approve">Please approve PJP/TP</string>
+    <string name="txt_enter_comment">Please enter Comment</string>
+    <string name="reset">Reset</string>
+    <string name="txt_canel">Cancel</string>
+    <string name="txt_select_visiting_pt">Select Visit Point</string>
+    <string name="txt_check_in_out">Other Visits</string>
+
+    &lt;!&ndash;Scheme Filter&ndash;&gt;
+    <string name="txt_enter_from_date">Please enter From Date</string>
+    <string name="txt_enter_to_date">Please enter To Date</string>
+    <string name="txt_enter_valid_to_date">To Date cannot be before From Date</string>
+    <string name="txt_enter_group">Please enter Group</string>
+    <string name="txt_enter_brand">Please enter Brand</string>
+    <string name="txt_enter_product">Please enter Product</string>
+    <string name="txt_apply_filter">Please apply filter first</string>
+    <string name="txt_select_scheme_nfc">Please select at least one scheme</string>
+
+    &lt;!&ndash;Report Filter&ndash;&gt;
+    <string name="txt_enter_year">Please enter Year</string>
+    <string name="txt_enter_visit_type">Please enter Visit Type</string>-->
+
+    <!--Camel case-->
+    <!--Validation messages-->
+    <string name="txt_password_policy_error">Password is required to have minimum 8 characters with at least one
+        alphabet, one number and one special character
+    </string>
+    <string name="txt_new_password_policy_error">New Password is required to have minimum 8 characters with at least one
+        alphabet, one number and one special character
+    </string>
+    <string name="txt_confirm_password_policy_error">Confirm Password is required to have minimum 8 characters with at
+        least one alphabet, one number and one special character
+    </string>
+
+    <string name="txt_current_new_password_same">Current Password and New Password cannot be same</string>
+    <string name="txt_both_password_same">New Password and Confirm Password must be same</string>
+    <string name="txt_pls_enter_new_password">Please Enter New Password</string>
+    <string name="txt_pls_reenter_new_password">Please Enter Confirm Password</string>
+    <string name="txt_no_internet_connection">No Internet Connection</string>
+    <string name="txt_something_went_wrong">Something Went Wrong</string>
+
+    <!--Forgot Password-->
+    <string name="txt_enter_email_id">Please Enter Email</string>
+    <string name="txt_enter_valid_email_id">Please Enter valid Email</string>
+
+    <!--Login-->
+    <string name="txt_enter_password">Please Enter Password</string>
+
+    <!--Verify OTP-->
+    <string name="txt_enter_otp_">Please Enter OTP</string>
+    <string name="txt_enter_valid_otp">Please Enter valid OTP</string>
+
+    <!--Change Password-->
+    <string name="txt_enter_new_password_">Please Enter New Password</string>
+    <string name="txt_enter_valid_password">Please Enter valid Password</string>
+    <string name="txt_re_enter_new_password">Please Re-enter New Password</string>
+    <string name="txt_confirm_new_password">Confirm New Password</string>
+    <string name="txt_current_password">Current Password</string>
+    <string name="txt_new_password">New Password</string>
+    <string name="txt_re_enter_password">Re-enter Password</string>
+    <string name="txt_star">*</string>
+
+    <string name="txt_no_records_field">No Records For %1s</string>
+    <string name="txt_add_pjp">Add PJP</string>
+    <string name="txt_edit_pjp">Edit PJP</string>
+    <string name="txt_add_tpp">Add TP</string>
+    <string name="txt_edit_tpp">Edit TP</string>
+    <string name="txt_reschedule_tpp">Reschedule TP</string>
+    <string name="txt_add_inhouse">Add Inhouse Followup</string>
+    <string name="txt_edit_inhouse">Edit Inhouse Followup</string>
+    <string name="permission_denied_explanation">Denied Permission</string>
+    <string name="settings">Settings</string>
+    <string name="permission_rationale">Permission</string>
+    <string name="ok">OK</string>
+
+    <!--Add/Edit Customer-->
+    <string name="txt_enter_dealer_code">Please Enter Customer Code</string>
+    <string name="txt_enter_valid_dealer_code">Please Enter Valid Customer Code</string>
+    <string name="txt_enter_dealer_name">Please Enter Customer Name</string>
+    <string name="txt_enter_valid_dealer_name">Please Enter Valid Customer Name</string>
+    <string name="txt_enter_contact_person_name">Please Enter Contact Person Name</string>
+    <string name="txt_enter_valid_contact_person_name">Please Enter Valid Contact Person Name</string>
+    <string name="txt_enter_mobile_number">Please Enter Mobile Number</string>
+    <string name="txt_enter_valid_mobile_number">Please Enter Valid Mobile Number</string>
+    <string name="txt_enter_contact_number">Please Enter Contact Number</string>
+    <string name="txt_enter_valid_contact_number">Please Enter Valid Contact Number</string>
+    <string name="txt_enter_address">Please Enter Address</string>
+    <string name="txt_enter_country">Please Enter Country</string>
+    <string name="txt_enter_state">Please Enter State</string>
+    <string name="txt_enter_city">Please Enter City</string>
+    <string name="txt_enter_pincode">Please Enter Valid Pincode</string>
+    <string name="txt_enter_valid_pincode">Please Enter Valid Pincode</string>
+    <string name="txt_enter_current_annual_turnover">Please Enter Current Annual Turnover</string>
+    <string name="txt_enter_valid_current_annual_turnover">Please Enter Valid Current Annual Turnover</string>
+    <string name="txt_enter_monthly_value_billing">Please Enter Monthly Value Billing</string>
+    <string name="txt_enter_valid_monthly_value_billing">Please Enter Valid Monthly Value Billing</string>
+    <string name="txt_enter_monthly_value_billing_less_than_annual_turnover">Monthly Value Billing should be less than
+        Current Annual Turnover
+    </string>
+    <!--<string name="txt_enter_dealing_with_brands">Please Enter Dealing With Brands</string>-->
+    <string name="txt_enter_dealing_with_brands">Please Select Dealing With Brands</string>
+    <string name="txt_enter_vaild_dealing_with_brands">Please Enter Valid Dealing With Brands</string>
+    <string name="txt_enter_area_of_operation">Please Enter Area Of Operation</string>
+    <string name="txt_enter_billing_to_start_from">Please Enter Billing To Start From</string>
+    <string name="txt_enter_valid_billing_to_start_from">Please Enter Valid Billing To Start From</string>
+    <string name="geofences_added">Geofences Added TradePartner</string>
+    <string name="geofence_transition_entered">Geo Entered TradePartner</string>
+    <string name="geofence_transition_exited">Geofence exit TradePartner</string>
+    <string name="unknown_geofence_transition">Unknown TradePartner</string>
+
+    <string name="txt_check_approve">Please Approve PJP First</string>
+    <string name="txt_no_data">No Data Available</string>
+
+    <string name="txt_is_approve">Please Approve PJP/TP</string>
+    <string name="txt_enter_comment">Please Enter Comment</string>
+    <string name="reset">Reset</string>
+    <string name="txt_canel">Cancel</string>
+    <string name="txt_close">Close</string>
+    <string name="txt_select_visiting_pt">Select Check-In Point</string>
+    <string name="txt_check_in_out">Other Visits</string>
+
+    <!--Scheme Filter-->
+    <string name="txt_enter_from_date">Please Enter From Date</string>
+    <string name="txt_enter_to_date">Please Enter To Date</string>
+    <string name="txt_enter_valid_from_date">From Date cannot be greater than To Date</string>
+    <string name="txt_enter_valid_to_date">To Date cannot be less than From Date</string>
+    <string name="txt_enter_group">Please Enter Group</string>
+    <string name="txt_enter_brand">Please Enter Brand</string>
+    <string name="txt_enter_product">Please Enter Product</string>
+    <string name="txt_apply_filter">Please Apply Filter First</string>
+    <string name="txt_select_scheme_nfc">Please Select at least one Scheme</string>
+
+    <!--Report Filter-->
+    <string name="txt_enter_year">Please Enter Year</string>
+    <string name="txt_select_year">Please Select Year</string>
+    <string name="txt_enter_visit_type">Please Enter Visit Type</string>
+    <string name="txt_select_visit_type">Please Select Visit Type</string>
+
+    <!--&lt;!&ndash;New Validation Messages&ndash;&gt;
+    &lt;!&ndash;Validation messages&ndash;&gt;
+    <string name="txt_password_policy_error">password is required to have minimum 8 characters with at least one alphabet, one number and one special character</string>
+    <string name="txt_new_password_policy_error">new password is required to have minimum 8 characters with at least one alphabet, one number and one special character</string>
+    <string name="txt_confirm_password_policy_error">confirm password is required to have minimum 8 characters with at least one alphabet, one number and one special character</string>
+
+
+    <string name="txt_current_new_password_same">current password and new password cannot be same</string>
+    <string name="txt_both_password_same">new password and confirm password must be same</string>
+    <string name="txt_pls_enter_new_password">please enter new password</string>
+    <string name="txt_pls_reenter_new_password">please enter confirm password</string>
+    <string name="txt_no_internet_connection">no internet connection</string>
+    <string name="txt_something_went_wrong">something went wrong</string>
+
+    &lt;!&ndash;Forgot Password&ndash;&gt;
+    <string name="txt_enter_email_id">please enter email</string>
+    <string name="txt_enter_valid_email_id">please enter valid email</string>
+
+    &lt;!&ndash;Login&ndash;&gt;
+    <string name="txt_enter_password">please enter password</string>
+
+    &lt;!&ndash;Verify OTP&ndash;&gt;
+    <string name="txt_enter_otp_">please enter OTP</string>
+    <string name="txt_enter_valid_otp">please enter valid OTP</string>
+
+    &lt;!&ndash;Change Password&ndash;&gt;
+    <string name="txt_enter_new_password_">please enter new password</string>
+    <string name="txt_enter_valid_password">please enter valid password</string>
+    <string name="txt_re_enter_new_password">please re-enter new password</string>
+    <string name="txt_confirm_new_password">Confirm New Password</string>
+    <string name="txt_current_password">Current Password</string>
+    <string name="txt_new_password">New Password</string>
+    <string name="txt_re_enter_password">Re-enter Password</string>
+    <string name="txt_star">*</string>
+
+    <string name="txt_no_records_field">no records for %1s</string>
+    <string name="txt_add_pjp">Add PJP</string>
+    <string name="txt_edit_pjp">Edit PJP</string>
+    <string name="txt_add_tpp">Add TP</string>
+    <string name="txt_edit_tpp">Edit TP</string>
+    <string name="permission_denied_explanation">Denied Permission</string>
+    <string name="settings">Settings</string>
+    <string name="permission_rationale">Permission</string>
+    <string name="ok">OK</string>
+
+    &lt;!&ndash;Add/Edit Customer&ndash;&gt;
+    <string name="txt_enter_dealer_code">please enter customer code</string>
+    <string name="txt_enter_valid_dealer_code">please enter valid customer code</string>
+    <string name="txt_enter_dealer_name">please enter customer name</string>
+    <string name="txt_enter_valid_dealer_name">please enter valid customer name</string>
+    <string name="txt_enter_contact_person_name">please enter contact person name</string>
+    <string name="txt_enter_valid_contact_person_name">please enter valid contact person name</string>
+    <string name="txt_enter_mobile_number">please enter mobile number</string>
+    <string name="txt_enter_valid_mobile_number">please enter valid mobile number</string>
+    <string name="txt_enter_contact_number">please enter contact number</string>
+    <string name="txt_enter_valid_contact_number">please enter valid contact number</string>
+    <string name="txt_enter_address">please enter address</string>
+    <string name="txt_enter_country">please enter country</string>
+    <string name="txt_enter_state">please enter state</string>
+    <string name="txt_enter_city">please enter city</string>
+    <string name="txt_enter_pincode">please enter pincode</string>
+    <string name="txt_enter_valid_pincode">please enter valid pincode</string>
+    <string name="txt_enter_current_annual_turnover">please enter current annual turnover</string>
+    <string name="txt_enter_valid_current_annual_turnover">please enter valid current annual turnover</string>
+    <string name="txt_enter_monthly_value_billing">please enter monthly value billing</string>
+    <string name="txt_enter_valid_monthly_value_billing">please enter valid monthly value billing</string>
+    <string name="txt_enter_dealing_with_brands">please enter dealing with brands</string>
+    <string name="txt_enter_area_of_operation">please enter area Of operation</string>
+    <string name="txt_enter_billing_to_start_from">please enter billing to start from</string>
+
+    <string name="geofences_added">Geofences Added</string>
+    <string name="geofence_transition_entered">Geo Entered</string>
+    <string name="geofence_transition_exited">Geofence exit</string>
+    <string name="unknown_geofence_transition">Unknown</string>
+
+    <string name="txt_is_approve">please approve PJP/TP</string>
+    <string name="txt_enter_comment">please enter comment</string>
+
+    <string name="reset">Reset</string>
+    <string name="txt_canel">Cancel</string>
+    <string name="txt_select_visiting_pt">Select Visit Point</string>
+    <string name="txt_check_in_out">Other Visits</string>
+
+    &lt;!&ndash;Scheme Filter&ndash;&gt;
+    <string name="txt_enter_from_date">please enter from date</string>
+    <string name="txt_enter_to_date">please enter to date</string>
+    <string name="txt_enter_valid_to_date">to date cannot be before from date</string>
+    <string name="txt_enter_group">please enter group</string>
+    <string name="txt_enter_brand">please enter brand</string>
+    <string name="txt_enter_product">please enter product</string>
+    <string name="txt_apply_filter">please apply filter first</string>
+    <string name="txt_select_scheme_nfc">please select at least one scheme</string>
+
+    &lt;!&ndash;Report Filter&ndash;&gt;
+    <string name="txt_enter_year">please enter year</string>
+    <string name="txt_enter_visit_type">please enter visit type</string>-->
+
+    <!-- Scheme -->
+    <string name="txt_scheme">Scheme</string>
+    <string name="txt_nlc">NLC :</string>
+    <string name="txt_scheme_information">Scheme Information</string>
+    <!--<string name="txt_scheme_name">Scheme Name :</string>-->
+    <string name="txt_scheme_name">Scheme :</string>
+    <!--<string name="txt_scheme_product_name">Product Name :</string>-->
+    <string name="txt_scheme_product_name">Product :</string>
+    <string name="txt_scheme_price">Scheme Price :</string>
+    <!--<string name="txt_scheme_saving_price">Saving Price :</string>-->
+    <string name="txt_scheme_saving_price">Reward Value :</string>
+    <!--<string name="txt_scheme_product_price">Product Price :</string>-->
+    <string name="txt_scheme_product_price">Base Value :</string>
+    <string name="txt_scheme_description">Description :</string>
+    <string name="txt_scheme_select_date">Select Date</string>
+    <string name="txt_scheme_select_group">Select Group</string>
+    <string name="txt_scheme_select_item">Select Item</string>
+    <string name="txt_scheme_select_brand">Select Brand</string>
+    <string name="txt_scheme_select_product">Select Product</string>
+    <string name="txt_group">Group</string>
+    <string name="txt_brand">Brand</string>
+    <string name="txt_product">Product</string>
+    <string name="txt_get_scheme">Get Scheme</string>
+    <string name="txt_enter_customer_code_details">Select Dealer/Customer Code from the list</string>
+    <string name="txt_enter_customer_details">Select Dealer/Customer from the list</string>
+    <string name="txt_enter_customer_name_details">Select Dealer/Customer Name from the list</string>
+    <string name="txt_enter_schedule_in_time">Please Enter Schedule Time</string>
+    <string name="txt_enter_schedule_out_time">Please Enter Check Out Time</string>
+    <string name="txt_enter_point_to_discuss">Please Enter Point To Discuss</string>
+    <string name="txt_enter_exp_value">Please Enter Expected Value</string>
+    <string name="txt_HOD_Remark_hint">Remarks</string>
+    <string name="txt_comment_box_employee">Comments</string>
+    <string name="title_activity_mngr_emp_pjptpdetails">MngrEmpPJPTPDetailsActivity</string>
+    <string name="txt_Yes">Yes</string>
+    <string name="txt_No">No</string>
+    <string name="txt_confirm_approve_wo_comment">Confirm to approve without a comment.</string>
+    <string name="txt_denied_approve_wo_comment">Confirm to deny the approval</string>
+    <string name="txt_wish_to_cont_wo_comment">Wish to continue without comment</string>
+    <string name="txt_approve_tp_for_visit">Approve Tour for visit</string>
+    <string name="txt_dummy_new_dealer_Added">New Dealer Added</string>
+    <string name="txt_scheduled_time">Scheduled Time</string>
+    <string name="txt_back">Back</string>
+    <string name="saved">File successfully download</string>
+    <string name="error_download">Download failed</string>
+    <string name="txt_file_upload">File Upload</string>
+    <string name="txt_filter_list">Filter List</string>
+    <string name="txt_file_download">File Download</string>
+    <string name="txt_schecd_time">Schedule Time</string>
+    <string name="txt_enter_schedInTime">Enter Schedule In Time</string>
+    <string name="txt_logout_confirm">Confirm Logout</string>
+    <string name="txt_sure_to_exit">Exit the app?</string>
+    <string name="txt_file_upload_success">File upload successfully</string>
+    <string name="txt_filter_apply_no_track">Cannot track on when filter applied</string>
+    <string name="txt_previousdate_no_track">Cannot track on %1s date</string>
+    <string name="txt_no_journey_found">No %1s Found</string>
+
+    <string name="add_pjp_discuss_point_text_empty">Enter Point to discuss</string>
+    <!--    <string name="saved">File downloaded successfully</string>
+    <string name="error_download">Download Fail</string>-->
+    <string name="file_provider_authorities">com.itgs.tradepartners.provider</string>
+    <string name="country_name">India</string>
+    <string name="country_id">61f7b0a3-21e3-4c4e-91af-aed97255e111</string>
+
+    <string name="txt_invalid_login_Admin">Invalid login user</string>
+    <string name="txt_stayed_for">Stayed for : %1s</string>
+    <string name="txt_long_field">hjgfdjhfghdshj fdshjfhfdsfdsfdfdsfdsf fdsfdsf\n fdsf\n
+        fdsf\nfdsfdsfjdfgddsadsadsadsadsadsadsadsadsadsadsadsadsashjf dshjfghdsj
+        \\nfhdsfhdsfdsufuifdsiufyhdsuifdsfydsuifyd \\n fhkjdsgfdshjfgdshjfgdshjfgdshjfgdshjfg hfgdsfghj\\n
+        hjfgdshjfgdshjfgdshjfgdshjfghdsjfgdshjfgdshjfgdshj fhjgdsjfgdshjfgdshjfg shjfgdshjfghjew gh hjgfdjhfghdshj
+        fdshjfhfdsfdsfdfdsfdsf fdsfdsf\n fdsf\n fdsf\nfdsfdsfjdfgddsadsadsadsadsadhjgfdjhfghdshj fdshjfhfdsfdsfdfdsfdsf
+        fdsfdsf\n fdsf\n fdsf\nfdsfdsfjdfgddsadsadsadsadsadhjgfdjhfghdshj fdshjfhfdsfdsfdfdsfdsf fdsfdsf\n fdsf\n
+        fdsf\nfdsfdsfjdfgddsadsadsadsadsadhjgfdjhfghdshj fdshjfhfdsfdsfdfdsfdsf fdsfdsf\n fdsf\n
+        fdsf\nfdsfdsfjdfgddsadsadsadsadsadhjgfdjhfghdshj fdshjfhfdsfdsfdfdsfdsf fdsfdsf\n fdsf\n
+        fdsf\nfdsfdsfjdfgddsadsadsdsdsdsdsdd dsadfdsfdsfds fdsf dfdsfdsfadsadsadhjgfdjhfghdshj fdshjfhfdsfdsfdfdsfdsf
+        fdsfdsf\n fdsf\n fdsf\nfdsfdsfjdfgddsadsadsadsadsad hjgfdjhfghdshj fdshjfhfdsfdsfdfdsfdsf fdsfdsf\n fdsf\n
+        fdsf\nfdsfdsfjdfgddsadsadsadsadsadsadsadsadsadsadsadsadsashjf dshjfghdsj
+        \\nfhdsfhdsfdsufuifdsiufyhdsuifdsfydsuifyd \\n fhkjdsgfdshjfgdshjfgdshjfgdshjfgdshjfg hfgdsfghj\\n
+        hjfgdshjfgdshjfgdshjfgdshjfghdsjfgdshjfgdshjfgdshj fhjgdsjfgdshjfgdshjfg shjfgdshjfghjew gh hjgfdjhfghdshj
+        fdshjfhfdsfdsfdfdsfdsf fdsfdsf\n fdsf\n fdsf\nfdsfdsfjdfgddsadsadsadsadsadhjgfdjhfghdshj fdshjfhfdsfdsfdfdsfdsf
+        fdsfdsf\n fdsf\n fdsf\nfdsfdsfjdfgddsadsadsadsadsadhjgfdjhfghdshj fdshjfhfdsfdsfdfdsfdsf fdsfdsf\n fdsf\n
+        fdsf\nfdsfdsfjdfgddsadsadsadsadsadhjgfdjhfghdshj fdshjfhfdsfdsfdfdsfdsf fdsfdsf\n fdsf\n
+        fdsf\nfdsfdsfjdfgddsadsadsadsadsadhjgfdjhfghdshj fdshjfhfdsfdsfdfdsfdsf fdsfdsf\n fdsf\n
+        fdsf\nfdsfdsfjdfgddsadsadsdsdsdsdsdd dsadfdsfdsfds fdsf dfdsfdsfadsadsadhjgfdjhfghdshj fdshjfhfdsfdsfdfdsfdsf
+        fdsfdsf\n fdsf\n fdsf\nfdsfdsfjdfgddsadsadsadsadsadhjgfdjhfghdshj fdshjfhfdsfdsfdfdsfdsf fdsfdsf\n fdsf\n
+        fdsf\nfdsfdsfjdfgddsadsadsadsadsadsadsadsadsadsadsadsadsashjf dshjfghdsj
+        \\nfhdsfhdsfdsufuifdsiufyhdsuifdsfydsuifyd \\n fhkjdsgfdshjfgdshjfgdshjfgdshjfgdshjfg hfgdsfghj\\n
+        hjfgdshjfgdshjfgdshjfgdshjfghdsjfgdshjfgdshjfgdshj fhjgdsjfgdshjfgdshjfg shjfgdshjfghjew gh hjgfdjhfghdshj
+        fdshjfhfdsfdsfdfdsfdsf fdsfdsf\n fdsf\n fdsf\nfdsfdsfjdfgddsadsadsadsadsadhjgfdjhfghdshj fdshjfhfdsfdsfdfdsfdsf
+        fdsfdsf\n fdsf\n fdsf\nfdsfdsfjdfgddsadsadsadsadsadhjgfdjhfghdshj fdshjfhfdsfdsfdfdsfdsf fdsfdsf\n fdsf\n
+        fdsf\nfdsfdsfjdfgddsadsadsadsadsadhjgfdjhfghdshj fdshjfhfdsfdsfdfdsfdsf fdsfdsf\n fdsf\n
+        fdsf\nfdsfdsfjdfgddsadsadsadsadsadhjgfdjhfghdshj fdshjfhfdsfdsfdfdsfdsf fdsfdsf\n fdsf\n
+        fdsf\nfdsfdsfjdfgddsadsadsdsdsdsdsdd dsadfdsfdsfds fdsf dfdsfdsfadsadsadhjgfdjhfghdshj fdshjfhfdsfdsfdfdsfdsf
+        fdsfdsf\n fdsf\n fdsf\nfdsfdsfjdfgddsadsadsadsadsa HELOLO d
+    </string>
+    <string name="txt_no_checkin_visiting_pt">No checkin points available</string>
+    <string name="txt_cannot_select_future_date">Cannot open future date</string>
+    <string name="txt_comment_employee">Executive\'s Comment</string>
+    <string name="txt_approved">Approved</string>
+    <string name="txt_under_review">Under Review</string>
+    <string name="txt_inavalid_dates_selected">Invalid dates selected</string>
+    <string name="txt_already_checked_in">Already checkin at same place</string>
+    <string name="txt_time_out_excpetion">Oops !! Time out</string>
+    <string name="txt_socket_time_out_excpetion">Oops!! Socket Time out</string>
+
+    <!-- Scan crop-->
+    <string name="scanning">Saving</string>
+    <string name="cantCrop">Cant crop the image, change the points</string>
+    <string name="done">Done</string>
+
+
+    <string name="txt_TypeOf_Visit_Purp">Purpose of Visit</string>
+    <string name="txt_TypeOf_Visit_Purp2">Purpose of Visit:</string>
+    <string name="txt_visit_date">Visit Date</string>
+    <string name="txt_visit_date2">Visit Date:</string>
+    <string name="txt_item_search">Search</string>
+    <string name="txt_item">Item Name</string>
+    <string name="txt_qty">Quantity</string>
+    <string name="txt_tier_3">Is Tier 3 Visit</string>
+    <string name="txt_tier_3_customer">Is Tier 3 Customer</string>
+    <string name="txt_items_selected">Add Items</string>
+    <string name="txt_already_added_item">Item exists already</string>
+    <string name="txt_select_item">Please Select Item</string>
+    <string name="txt_no_items">No Items added</string>
+    <string name="txt_enter_visit_purpose">Select Visit Purpose</string>
+    <string name="txt_enter_item">Select Items</string>
+    <string name="txt_existing_tier3_warn">Existing Tier 3 customer found, details can\'t be changed</string>
+    <string name="txt_items_selected_added">Added Items</string>
+    <string name="txt_enter_visit_purpose_selected">Visit Purpose</string>
+    <string name="txt_inhouse_followup">Inhouse Followup</string>
+    <string name="txt_followup_time">Followup Time</string>
+    <string name="txt_enter_followup_time">Please enter Followup Time</string>
+    <string name="txt_location_not_found_admin">Unable to fetch location contact admin</string>
+    <string name="txt_location_not_found">Location selected is unble to locate. Please check address</string>
+    <string name="txt_non_visited">Not-Visited</string>
+    <string name="txt_visited">Visited</string>
+    <string name="txt_approved_small">approved</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="txt_pjp_add_previous">Cannot add for previous date</string>
+    <string name="txt_select_valid_item">Please select valid item</string>
+    <string name="txt_enter_customer_name">Enter Customer Name</string>
+    <string name="txt_enter_customer_address">Enter Customer Address</string>
+
+
+    <!-- Error strings -->
+    <string name="geofence_not_available">Geofence service is not available now</string>
+    <string name="geofence_too_many_geofences">Your app has registered too many geofences</string>
+    <string name="geofence_too_many_pending_intents">
+        You have provided too many PendingIntents to the addGeofences() call
+    </string>
+    <string name="unknown_geofence_error">
+        Unknown error: the Geofence service is not available now
+    </string>
+    <string name="geofence_transition_invalid_type">
+        Geofence transition error: invalid transition type %1$d
+    </string>
+    <string name="txt_no_permissions">No permission location</string>
+    <string name="txt_security_setting_alert">%1s - Security setting Alert</string>
+    <string name="txt_dont_show_again">Don\'t show this again</string>
+    <string name="txt_security_setting_miui">Enable auto-start for TradePartner app in the \'Security\' app. Go to
+        Security ->
+        Permissions -> Autostart -> enable for TradePartner \n\nThe default settings on this MIUI device does not
+        support real-time location tracking when the app is closed
+    </string>
+
+    <string name="txt_security_setting_others">Enable auto-start for TradePartner app in the \'Security\' app. Go to
+        Settings.\n\nThe default settings on this device does not support real-time location tracking when the app is
+        closed
+    </string>
+    <string name="txt_delete">Delete</string>
+    <string name="txt_confirm_delete_pjp">Confirm to delete %1s</string>
+    <string name="txt_confirm_cancel_tp">Confirm to cancel %1s</string>
+    <string name="txt_confirm_reschedule_tp">Confirm to reschedule %1s</string>
+    <string name="txt_confirm_tp_send_approval">Confirm to send this group for approval?</string>
+    <string name="txt_comments">Comments</string>
+    <string name="title_customer_name">Customer Name:</string>
+    <string name="title_visited_by">Visited By:</string>
+    <string name="title_status">Status:</string>
+    <string name="text_include_fos">Include FOS</string>
+    <string name="txt_google_loc">Google Location</string>
+    <string name="txt_internal_loc">Internal Location</string>
+    <string name="txt_switch_location">Switch Customer Location</string>
+    <string name="title_activity_location_snap">LocationSnapActivity</string>
+    <string name="txt_location_snap">Location Snap</string>
+    <string name="txt_request_by">Request by %1s</string>
+    <string name="text_is_visited">Customer Visited?</string>
+
+    <string name="text_tracking_not_allowed">Tracking is not enabled for this user.</string>
+    <string name="text_tracking_not_allowed_employee">Tracking is not enabled.</string>
+    <string name="txt_location_approval">Location Requests</string>
+    <string name="txt_recapture">Recapture</string>
+    <string name="txt_recapture_location">Please Recapture Location</string>
+    <string name="txt_not_yet_approved">Location not approved</string>
+    <string name="txt_unavailable_location">No accurate location found, please recapture</string>
+    <string name="txt_select_img_first">Please capture image first</string>
+    <string name="txt_stop_journey_first">Please stop journey first</string>
+
+    <string name="txt_tier3customer_list">Tier3 Customers</string>
+    <string name="txt_db_in_sync">Please wait database is in sync</string>
+
+    <string name="txt_eneter_tour_name">Please Enter Tour Name</string>
+    <string name="txt_reschedule">Reschedule</string>
+    <string name="txt_new">New</string>
+    <string name="txt_no_tp_to_approve">No Tours found for approval send</string>
+    <string name="txt_cant_track_tp_not_approve">Cannot track as TPs are not approved</string>
+    <string name="txt_not_yet_enable_approved_tp">Tour Plan is not finalized yet!</string>
+    <string name="txt_already_approve_tp">Already approved group</string>
+    <string name="txt_cant_approve_tp_group_astp">Group is not approved yet by SE/FOS</string>
+    <string name="text_tour_name">Tour Name</string>
+    <string name="txt_draft">Draft</string>
+    <string name="txt_tour_completed">Ready for approval</string>
+    <string name="txt_no_tp_in_group">Empty Tour Plan found</string>
+    <string name="txt_select_emp_from_list">Please select employee from list</string>
+    <string name="txt_not_sent_for_approval">Group not sent for approval by SE/FOS</string>
+    <string name="txt_tp_group_not_approve">Group is not approve yet</string>
+    <string name="txt_ok_small">Ok</string>
+    <string name="txt_dealer_name_t2_link">Link Dealer/Customer Name</string>
+    <string name="AUD_title">New version available</string>
+    <string name="AUD_msg">New version of app is available. Please update to version</string>
+    <string name="txt_ignore">Ignore</string>
+    <string name="txt_update">Update</string>
 
 </resources>

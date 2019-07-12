@@ -3,10 +3,13 @@ package com.example.mvvmapplication.data.db.entity
 import android.os.Parcel
 import android.os.Parcelable
 import androidx.annotation.NonNull
+import androidx.annotation.Nullable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import androidx.room.TypeConverters
 import com.example.mvvmapplication.base.BaseResponseModel
+import com.example.mvvmapplication.data.db.converters.NullConverters
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
@@ -100,10 +103,12 @@ class EmployeeListResponseModel() : BaseResponseModel(), Parcelable
             @Expose
             private var image: String? = null
 
+            /*@Nullable
+            @TypeConverters(NullConverters::class)
             @ColumnInfo(name = "visitType")
             @SerializedName("VisitType")
             @Expose
-            private var visitType: String? = null
+            private var visitType: String? = null*/
 
             @ColumnInfo(name = "designationId")
             @SerializedName("DesignationId")
@@ -162,13 +167,13 @@ class EmployeeListResponseModel() : BaseResponseModel(), Parcelable
                 this.image = image
             }
 
-            fun getVisitType(): String? {
+            /*fun getVisitType(): String? {
                 return visitType
             }
 
             fun setVisitType(visitType: String) {
                 this.visitType = visitType
-            }
+            }*/
 
             fun getDesignationId(): String? {
                 return designationId
