@@ -24,7 +24,7 @@ class EmployeeListViewModel(private val apiClient: ApiClient, private val dao: E
          getAll()
      }
 
-    suspend fun getAll(): LiveData<out List<EmployeeListResponseModel.EmployeeListResult.EmployeeListUserDetail>?> {
+    suspend fun getAll(): LiveData<out List<EmployeeListResponseModel.EmployeeListResult.EmployeeListUserDetail>> {
 
 //        return newsDao!!.getAllNews()
         return GlobalScope.async {
@@ -36,7 +36,7 @@ class EmployeeListViewModel(private val apiClient: ApiClient, private val dao: E
         val requestmodel = GetEmployeeListIDRequestModel()
         requestmodel.CommandType = APIConstants.GET_EMPLOYEELISTBY_ID
         requestmodel.UserId = "15a16afa-b507-4146-9809-c3b193e6b6ee"
-        requestmodel.DeviceToken = "6c931989-2bee-42f7-9d9c-dbacd308cc44"
+        requestmodel.DeviceToken = "f3a7bfc4-e0b9-4a3b-8991-b9adc9f2de9c"
 //            requestmodel.LastDtmChecked = SessionManager.getLastDtmEmployeeList()
         //Change offline logic for extra f;ag in table at api
         requestmodel.LastDtmChecked = ""
@@ -87,10 +87,10 @@ class EmployeeListViewModel(private val apiClient: ApiClient, private val dao: E
                             val inserted= dao.insertAll(responseModel.getResult()?.getUserDetail()!!)
                             Log.d("REQ:","inserted: $inserted")
 
-                            val lsit= dao.findAll()
-                            _items.value = lsit
-                            _items.postValue(lsit)
-                            Log.d("REQ:","lsit size: ${lsit.size}")
+//                            val lsit= dao.findAll()
+//                            _items.value = lsit
+//                            _items.postValue(lsit)
+//                            Log.d("REQ:","lsit size: ${lsit.size}")
                         } catch (e: Exception) {
                             e.message
                         }

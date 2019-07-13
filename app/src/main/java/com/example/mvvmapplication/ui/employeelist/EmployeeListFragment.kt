@@ -87,6 +87,7 @@ class EmployeeListFragment : BaseFragment(), OnClickListener, IUpdateUI {
 
             viewModel._items.await().observe(this@EmployeeListFragment, Observer { planner ->
                 if (planner == null) return@Observer
+                mainDocumentList.clear()
                 mainDocumentList.addAll(planner.toMutableList())//.filter { it.empId.toString() == SessionManager.getCurrentEmpID() }.toMutableList()
                 employeeListAdapterNew.notifyDataSetChanged()
 

@@ -1,11 +1,8 @@
 package com.example.mvvmapplication.data.db.dao
 
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.room.*
 import com.example.mvvmapplication.data.db.entity.EmployeeListResponseModel
-import androidx.paging.DataSource
-import java.util.ArrayList
 
 
 @Dao
@@ -14,7 +11,7 @@ interface EmployeeDao {
       suspend fun findAll(): DataSource.Factory<Int, EmployeeListResponseModel.EmployeeListResult.EmployeeListUserDetail>*/
 
     @Query("SELECT * FROM employees ORDER BY fname ASC")
-    suspend fun findAll(): LiveData<List<EmployeeListResponseModel.EmployeeListResult.EmployeeListUserDetail>>
+    fun findAll(): LiveData<List<EmployeeListResponseModel.EmployeeListResult.EmployeeListUserDetail>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(employee: EmployeeListResponseModel.EmployeeListResult.EmployeeListUserDetail)

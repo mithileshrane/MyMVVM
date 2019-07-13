@@ -83,6 +83,7 @@ class EmployeeListResponseModel() : BaseResponseModel(), Parcelable
         class EmployeeListUserDetail() : Parcelable
         {
             @NonNull
+            @ColumnInfo(name = "userId")
             @PrimaryKey
             @SerializedName("UserId")
             @Expose
