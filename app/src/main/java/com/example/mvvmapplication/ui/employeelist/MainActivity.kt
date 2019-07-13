@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.view.Menu
 import android.view.MenuItem
 import com.example.mvvmapplication.R
+import com.example.mvvmapplication.ui.passdata.DoubleFragment
 
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -15,8 +16,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
-        supportFragmentManager.beginTransaction()
+       /* supportFragmentManager.beginTransaction()
             .add(R.id.framLay,EmployeeListFragment(),EmployeeListFragment::class.java.simpleName)
+            .commit()*/
+
+        supportFragmentManager.beginTransaction()
+            .add(R.id.framLay,
+                DoubleFragment(),
+                DoubleFragment::class.java.simpleName)
             .commit()
     }
 

@@ -96,7 +96,7 @@ dependencies {
     api "org.jetbrains.kotlinx:kotlinx-coroutines-android:$rootProject.coroutines"
 
 
-   /* // Koin AndroidX Scope features
+    /* // Koin AndroidX Scope features
     implementation "org.koin:koin-androidx-scope:$rootProject.koin_version"
 // Koin AndroidX ViewModel features
     implementation "org.koin:koin-androidx-viewmodel:$rootProject.koin_version"
