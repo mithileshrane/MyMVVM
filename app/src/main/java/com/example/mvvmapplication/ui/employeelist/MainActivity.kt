@@ -16,15 +16,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
-       /* supportFragmentManager.beginTransaction()
+       supportFragmentManager.beginTransaction()
             .add(R.id.framLay,EmployeeListFragment(),EmployeeListFragment::class.java.simpleName)
-            .commit()*/
+            .commit()
 
-        supportFragmentManager.beginTransaction()
+       /* supportFragmentManager.beginTransaction()
             .add(R.id.framLay,
                 DoubleFragment(),
                 DoubleFragment::class.java.simpleName)
-            .commit()
+            .commit()*/
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

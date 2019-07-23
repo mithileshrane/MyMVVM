@@ -51,23 +51,28 @@ class EmployeeListAdapterNew(
 //        App.setTypeFace()
 //        holder.tv_employee_name.typeface = App.getRobotoMediumTypeFace()!!
 
-       /* // Setting Image
-        GlideApp.with(context)
-            .load(*//*APIConstants.RELATIVE_URL + *//*employeeListModel.getImage())
+        /* // Setting Image
+         GlideApp.with(context)
+             .load(*//*APIConstants.RELATIVE_URL + *//*employeeListModel.getImage())
             .placeholder(R.drawable.ic_man_user)
             .error(R.drawable.ic_man_user)
 //            .apply(RequestOptions().transform(CircleTransform(context)))
             .into(holder.iv_employee_img)*/
 
         holder.tv_employee_name.text =
-                (employeeListModel.getFirstName()?.toString() + " " + employeeListModel.getLastName()?.toString())
+            (employeeListModel.getFirstName()?.toString() + " " + employeeListModel.getLastName()?.toString())
         holder.tv_employee_designation.text = employeeListModel.getDesignation()
-      /*  if(employeeListModel.getIsTrackAllow()!!){
-            holder.tv_tracking_status.text = "Tracking Disabled"
-        }else{
-            holder.tv_tracking_status.text = "Tracking Enabled"
-        }*/
+        /*  if(employeeListModel.getIsTrackAllow()!!){
+              holder.tv_tracking_status.text = "Tracking Disabled"
+          }else{
+              holder.tv_tracking_status.text = "Tracking Enabled"
+          }*/
         holder.tvHolder.setOnClickListener { listener.onClickItem(employeeListModel) }
+        holder.tvHolder.setOnLongClickListener {
+            listener.onLongClick(employeeListModel)
+
+            return@setOnLongClickListener true
+        }
 
         /* if (items.size - 1 == position)
              holder.tvNavDividerline.visibility = View.INVISIBLE*/
@@ -91,7 +96,8 @@ class EmployeeListAdapterNew(
                 if (charString.isEmpty()) {
                     filteredList = list
                 } else {
-                    val filteredListNew = ArrayList<EmployeeListResponseModel.EmployeeListResult.EmployeeListUserDetail>()
+                    val filteredListNew =
+                        ArrayList<EmployeeListResponseModel.EmployeeListResult.EmployeeListUserDetail>()
                     for (row in list) {
 
                         // name match condition. this might differ depending on your requirement
@@ -113,7 +119,8 @@ class EmployeeListAdapterNew(
             }
 
             override fun publishResults(charSequence: CharSequence, filterResults: Filter.FilterResults) {
-                filteredList = filterResults.values as ArrayList<EmployeeListResponseModel.EmployeeListResult.EmployeeListUserDetail>
+                filteredList =
+                    filterResults.values as ArrayList<EmployeeListResponseModel.EmployeeListResult.EmployeeListUserDetail>
                 notifyDataSetChanged()
                 if (filteredList.size == 0)
                     uiUpdateListener.showNoRecordView()

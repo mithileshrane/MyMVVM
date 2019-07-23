@@ -14,6 +14,7 @@ import com.example.mvvmapplication.extensions.lazyDeferred
 import com.example.mvvmapplication.extensions.with
 import com.example.mvvmapplication.util.NotNullMutableLiveData
 import com.google.gson.Gson
+import io.reactivex.Completable
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async
 
@@ -24,10 +25,15 @@ class EmployeeListViewModel(private val apiClient: ApiClient, private val dao: E
          getAll()
      }
 
+    var filteredPosts: MutableList<EmployeeListResponseModel.EmployeeListResult.EmployeeListUserDetail> = mutableListOf()
+    var oldFilteredPosts: MutableList<EmployeeListResponseModel.EmployeeListResult.EmployeeListUserDetail> = mutableListOf()
+
+
     suspend fun getAll(): LiveData<out List<EmployeeListResponseModel.EmployeeListResult.EmployeeListUserDetail>> {
 
 //        return newsDao!!.getAllNews()
         return GlobalScope.async {
+            filteredPosts = dao.findAll().value as MutableList<EmployeeListResponseModel.EmployeeListResult.EmployeeListUserDetail>
             return@async dao.findAll()
         }.await()
     }
@@ -36,7 +42,7 @@ class EmployeeListViewModel(private val apiClient: ApiClient, private val dao: E
         val requestmodel = GetEmployeeListIDRequestModel()
         requestmodel.CommandType = APIConstants.GET_EMPLOYEELISTBY_ID
         requestmodel.UserId = "15a16afa-b507-4146-9809-c3b193e6b6ee"
-        requestmodel.DeviceToken = "f3a7bfc4-e0b9-4a3b-8991-b9adc9f2de9c"
+        requestmodel.DeviceToken = "a960796b-f1c2-4763-a404-5b6efd99ed4c"
 //            requestmodel.LastDtmChecked = SessionManager.getLastDtmEmployeeList()
         //Change offline logic for extra f;ag in table at api
         requestmodel.LastDtmChecked = ""
@@ -128,5 +134,16 @@ class EmployeeListViewModel(private val apiClient: ApiClient, private val dao: E
 */
     }
 
+    fun search(query: String): Completable = Completable.create {
+        val wanted = oldFilteredPosts
+            .filter {
+            it.getFirstName()?.toLowerCase()?.contains(query)!! || it.getLastName()?.toLowerCase()?.contains(query)!!
+                    || it.getDesignation()?.toLowerCase()?.contains(query)!!
+        }.toList()
+
+        filteredPosts.clear()
+        filteredPosts.addAll(wanted)
+        it.onComplete()
+    }
 
 }

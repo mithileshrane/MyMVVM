@@ -712,5 +712,6 @@
     <string name="txt_ignore">Ignore</string>
     <string name="txt_update">Update</string>
     <string name="title_activity_double_activty">DoubleActivty</string>
+    <string name="search_hint">Search</string>
 
 </resources>
