@@ -1,6 +1,5 @@
 package com.example.mvvmapplication.ui.employeelist
 
-import android.app.Dialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -17,8 +16,10 @@ import com.example.mvvmapplication.data.db.entity.EmployeeListResponseModel
 import com.itgs.tradepartners.interfaces.IUpdateUI
 import com.itgs.tradepartners.interfaces.OnClickListener
 import com.jakewharton.rxbinding2.widget.textChanges
+import io.reactivex.Completable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.rxkotlin.addTo
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.employee_list_fragment.*
 import kotlinx.coroutines.Dispatchers
@@ -30,6 +31,8 @@ import java.util.concurrent.TimeUnit
 
 class EmployeeListFragment : BaseFragment(), OnClickListener, IUpdateUI {
 
+    var filteredPosts: MutableList<EmployeeListResponseModel.EmployeeListResult.EmployeeListUserDetail> =
+        mutableListOf()
     private val disposable = CompositeDisposable()
 
     override fun onLongClick(item: Any) {
@@ -39,18 +42,24 @@ class EmployeeListFragment : BaseFragment(), OnClickListener, IUpdateUI {
         //builder.setPositiveButton("OK", DialogInterface.OnClickListener(function = x))
 
         builder.setPositiveButton(android.R.string.yes) { dialog, which ->
-            Toast.makeText(activity!!,
-                android.R.string.yes, Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                activity!!,
+                android.R.string.yes, Toast.LENGTH_SHORT
+            ).show()
         }
 
         builder.setNegativeButton(android.R.string.no) { dialog, which ->
-            Toast.makeText(activity!!,
-                android.R.string.no, Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                activity!!,
+                android.R.string.no, Toast.LENGTH_SHORT
+            ).show()
         }
 
         builder.setNeutralButton("Maybe") { dialog, which ->
-            Toast.makeText(activity!!,
-                "Maybe", Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                activity!!,
+                "Maybe", Toast.LENGTH_SHORT
+            ).show()
         }
         builder.show()
     }
@@ -74,8 +83,8 @@ class EmployeeListFragment : BaseFragment(), OnClickListener, IUpdateUI {
         fun newInstance() = EmployeeListFragment()
     }
 
-    private  var mainDocumentList: MutableList<EmployeeListResponseModel.EmployeeListResult.EmployeeListUserDetail>
-            =ArrayList<EmployeeListResponseModel.EmployeeListResult.EmployeeListUserDetail>()
+    private var mainDocumentList: MutableList<EmployeeListResponseModel.EmployeeListResult.EmployeeListUserDetail> =
+        ArrayList<EmployeeListResponseModel.EmployeeListResult.EmployeeListUserDetail>()
     private lateinit var viewModel: EmployeeListViewModel
 
     private lateinit var employeeListAdapterNew: EmployeeListAdapterNew
@@ -99,27 +108,25 @@ class EmployeeListFragment : BaseFragment(), OnClickListener, IUpdateUI {
             mainDocumentList as ArrayList<EmployeeListResponseModel.EmployeeListResult.EmployeeListUserDetail>
             , activity!!, this, this
         )
-        recylView?.layoutManager = mLayoutManager
-        recylView?.adapter = employeeListAdapterNew
-        bindUI()
-
 
         searchInput
             .textChanges()
             .debounce(200, TimeUnit.MILLISECONDS)
             .subscribe {
-                viewModel
-                    .search(it.toString())
+                search(it.toString())
                     .subscribeOn(Schedulers.computation())
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe {
-                        val diffResult = DiffUtil.
-                            calculateDiff(PostsDiffUtilCallback(viewModel.oldFilteredPosts, viewModel.filteredPosts))
-                        viewModel.oldFilteredPosts.clear()
-                        viewModel.oldFilteredPosts.addAll(viewModel.filteredPosts)
+                        val diffResult = DiffUtil.calculateDiff(PostsDiffUtilCallback(mainDocumentList, filteredPosts))
+//                        mainDocumentList.clear()
+                        mainDocumentList.addAll(filteredPosts)
                         diffResult.dispatchUpdatesTo(employeeListAdapterNew)
                     }.addTo(disposable)
             }.addTo(disposable)
+
+        recylView?.layoutManager = mLayoutManager
+        recylView?.adapter = employeeListAdapterNew
+        bindUI()
 
 
         /*viewModel._items.observe(this, Observer { result ->
@@ -137,6 +144,18 @@ class EmployeeListFragment : BaseFragment(), OnClickListener, IUpdateUI {
 
     }
 
+    fun search(query: String): Completable = Completable.create {
+        val wanted = mainDocumentList
+            .filter {
+                it.getFirstName()?.contains(query,true)!! || it.getLastName()?.contains(query,true)!!
+                        || it.getDesignation()?.contains(query,true)!!
+            }.toList()
+
+        filteredPosts.clear()
+        filteredPosts.addAll(wanted)
+        it.onComplete()
+    }
+
     private fun bindUI() = GlobalScope.launch(Dispatchers.Main) {
         try {
 
@@ -147,6 +166,8 @@ class EmployeeListFragment : BaseFragment(), OnClickListener, IUpdateUI {
                 employeeListAdapterNew.notifyDataSetChanged()
 
             })
-        }catch (e:Exception){}
+        } catch (e: Exception) {
+            e.message
+        }
     }
 }

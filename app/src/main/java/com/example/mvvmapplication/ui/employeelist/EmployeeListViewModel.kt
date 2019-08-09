@@ -33,7 +33,7 @@ class EmployeeListViewModel(private val apiClient: ApiClient, private val dao: E
 
 //        return newsDao!!.getAllNews()
         return GlobalScope.async {
-            filteredPosts = dao.findAll().value as MutableList<EmployeeListResponseModel.EmployeeListResult.EmployeeListUserDetail>
+//            oldFilteredPosts = dao.findAll().value as MutableList<EmployeeListResponseModel.EmployeeListResult.EmployeeListUserDetail>
             return@async dao.findAll()
         }.await()
     }
@@ -42,7 +42,7 @@ class EmployeeListViewModel(private val apiClient: ApiClient, private val dao: E
         val requestmodel = GetEmployeeListIDRequestModel()
         requestmodel.CommandType = APIConstants.GET_EMPLOYEELISTBY_ID
         requestmodel.UserId = "15a16afa-b507-4146-9809-c3b193e6b6ee"
-        requestmodel.DeviceToken = "a960796b-f1c2-4763-a404-5b6efd99ed4c"
+        requestmodel.DeviceToken = "04f7abd3-bad6-428f-a478-926ea8986e6d"
 //            requestmodel.LastDtmChecked = SessionManager.getLastDtmEmployeeList()
         //Change offline logic for extra f;ag in table at api
         requestmodel.LastDtmChecked = ""
